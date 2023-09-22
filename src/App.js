@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import { observer } from 'mobx-react';
+import { useCounterStore } from './context/counterContext';
+
 
 function App(props) {
 
-  
+  const myCounter = useCounterStore();
 
-  const { myCounter } = props;
   console.log('myCounter',myCounter);
 
   return (
